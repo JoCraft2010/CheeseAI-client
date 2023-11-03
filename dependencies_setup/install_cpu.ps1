@@ -12,7 +12,6 @@ $packagesToUninstall | ForEach-Object {
 pip install --upgrade pip
 pip install --upgrade setuptools
 pip install --upgrade wheel
-pip install --upgrade pyinstaller
 pip install --upgrade torch
 pip install --upgrade torchvision
 pip install --upgrade torchaudio
