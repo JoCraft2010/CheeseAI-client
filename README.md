@@ -19,7 +19,9 @@ and pressing enter.
 If you already know how to create a venv, you can skip this section.
 
 1. Go to the folder, where you want to install the CheeseAI client. **Warning:** The folder must be empty!
+
 2. Open PowerShell by pressing ```Shift+Right mouse button->Open PowerShell in this location``` in your open folder.
+
 3. Type
 ```commandline
 py -m venv venv
@@ -87,15 +89,18 @@ This command will set up all dependencies for you.
 ### 1. Windows
 
 1. Open PowerShell, as described in 1.1.2.2.
+
 2. Enter your previously created venv using
 ```commandline
 cd venv
 Scripts\activate
 cd ..
 ```
+
 3. Run the program by executing
 ```commandline
 py main.py
 ```
 inside the venv or running main.py using the IDE of your choice.
+
 4. After a few seconds, a console and an instance of your default browser with the UI should open.
