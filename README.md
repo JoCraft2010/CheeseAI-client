@@ -1,10 +1,16 @@
 # CheeseAI client
 
-## 1. Installation
+## 1. General information
 
-### 1.1. Windows
+CheeseAI is a client for pretrained models from [Huggingface](https://huggingface.co/models), supporting text-generation (transformers) and text-to-image (diffusers) so far.
 
-#### 1.1.1. Installing Python
+All files and newer Versions are available on [GitHub](https://github.com/JoCraft2010/CheeseAI-client).
+
+## 2. Installation
+
+### 2.1. Windows
+
+#### 2.1.1. Installing Python
 
 Download and install the [newest version of Python](https://www.python.org/downloads/windows/), if you haven't already.
 
@@ -14,7 +20,7 @@ py --version
 ```
 and pressing enter.
 
-#### 1.1.2. Creating a venv
+#### 2.1.2. Creating a venv
 
 If you already know how to create a venv, you can skip this section.
 
@@ -34,7 +40,7 @@ to create and enter a venv called ```venv```. **Warning:** When you are finished
 deactivate
 ```
 
-#### 1.1.3. Installing CheeseAI client
+#### 2.1.3. Installing CheeseAI client
 
 Copy All cheeseAI client files to your project folder. **Warning:** Copy them directly to your installation folder, so your file system will look like this:
 ```
@@ -64,7 +70,7 @@ Copy All cheeseAI client files to your project folder. **Warning:** Copy them di
 |- [...]
 ```
 
-#### 1.1.4. Setting up all dependencies
+#### 2.1.4. Setting up all dependencies
 
 Go back to PowerShell and make sure, that you are inside the venv, you created.
 You are inside a venv, when PowerShell looks something like ```(venv) PS C:\Path\to\your\folder>```.
@@ -84,11 +90,11 @@ You will be given another command, you have to execute that will look something 
 ```
 This command will set up all dependencies for you.
 
-## 2. Usage
+## 3. Usage
 
-### 1. Windows
+### 3.1. Windows
 
-1. Open PowerShell, as described in 1.1.2.2.
+1. Open PowerShell, as described in 2.1.2.2.
 
 2. Enter your previously created venv using
 ```commandline
