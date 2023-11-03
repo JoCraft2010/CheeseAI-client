@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>CheeseAI client</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    <body>
+        <h1 class="title">CheeseAI client - {{ model }}</h1>
+
+        <div class="listmenu">
+            <a href="/transformers/simple_chat?m={{ model }}">Simple chat</a>
+            <a href="/transformers/irt_generative_chat?m={{ model }}">In-real-time generative chat</a>
+        </div>
+    </body>
+</html>

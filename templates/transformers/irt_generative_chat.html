@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>CheeseAI client</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    <body>
+        <h1 class="title">CheeseAI client - {{ model }} - In-real-time generative chat</h1>
+        <div class="clistmenu">
+            <div id="conversation"></div>
+            <input class="perc100m56" type="text" id="user_input">
+            <div class="clistmenu_slmenu perc100m56">
+                <p>Iterations: <span id="simple_chat_iter_val"></span></p>
+                <input type="range" min="1" max="20" value="5" class="slider perc100m32" id="simple_chat_iter">
+                <p>Context length: <span id="simple_chat_conLen_val"></span></p>
+                <input type="range" min="100" max="5000" value="100" class="slider perc100m32" id="simple_chat_conLen">
+            </div>
+            <button class="perc100m32" onclick="asend(0)">Send</button>
+        </div>
+
+        <script src="{{ url_for('static', filename='js/helper_tools.js') }}"></script>
+        <script>const loaded_model = "{{ model }}";sliderRegisterOnUpdate("simple_chat_iter", "simple_chat_iter_val");sliderRegisterOnUpdate("simple_chat_conLen", "simple_chat_conLen_val");</script>
+        <script src="{{ url_for('static', filename='js/local_transformers_llms.js') }}"></script>
+    </body>
+</html>

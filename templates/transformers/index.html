@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>CheeseAI client</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    <body>
+        <h1 class="title">CheeseAI client - Huggingface transformers</h1>
+        <div class="listmenu">
+            <div class="warn">
+                <p>Not all of the models listed here are compatible with this Huggingface transformers pipeline.</p>
+            </div>
+            {{ installed_models }}
+            <a href="/transformers/add_model">Install models</a>
+        </div>
+    </body>
+</html>

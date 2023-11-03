@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>CheeseAI client</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    <body>
+        <h1 class="title">CheeseAI client - {{ model }} - Simple Image generation</h1>
+        <div class="clistmenu">
+            <div id="conversation"></div>
+            <input class="perc100m56" type="text" id="user_input">
+            <div class="clistmenu_slmenu perc100m56">
+                <div class="dropdown">
+                    <button class="dropbtn">Resolution: <span id="drop_res_val">1024 x 1024: square (1:1)</span></button>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="document.getElementById('drop_res_val').innerHTML='768 x 1344: Vertical (9:16)'; res_width=768; res_height=1344;">768 x 1344: Vertical (9:16)</a>
+                        <a href="#" onclick="document.getElementById('drop_res_val').innerHTML='912 x 1144: Portrait (4:5)'; res_width=912; res_height=1144;">912 x 1144: Portrait (4:5)</a>
+                        <a href="#" onclick="document.getElementById('drop_res_val').innerHTML='1184 x 888: Photo (4:3)'; res_width=1184; res_height=888;">1184 x 888: Photo (4:3)</a>
+                        <a href="#" onclick="document.getElementById('drop_res_val').innerHTML='1256 x 840: Landscape (3:2)'; res_width=1256; res_height=840;">1256 x 840: Landscape (3:2)</a>
+                        <a href="#" onclick="document.getElementById('drop_res_val').innerHTML='1368 x 768: Widescreen (16:9)'; res_width=1368; res_height=768;">1368 x 768: Widescreen (16:9)</a>
+                        <a href="#" onclick="document.getElementById('drop_res_val').innerHTML='1560 x 672: Cinematic (21:9)'; res_width=1560; res_height=672;">1560 x 672: Cinematic (21:9)</a>
+                        <a href="#" onclick="document.getElementById('drop_res_val').innerHTML='1920 x 1080: Full HD (16:9)'; res_width=1920; res_height=1080;">1920 x 1080: Full HD (16:9)</a>
+                        <a href="#" onclick="document.getElementById('drop_res_val').innerHTML='1024 x 1024: square (1:1)'; res_width=1024; res_height=1024;">1024 x 1024: square (1:1)</a>
+                    </div>
+                </div>
+            </div>
+            <button class="perc100m32" onclick="send()">Send</button>
+        </div>
+
+        <script>loaded_model = "{{ model }}";</script>
+        <script src="{{ url_for('static', filename='js/local_diffusers_sds.js') }}"></script>
+    </body>
+</html>

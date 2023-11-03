@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>CheeseAI client</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    <body>
+        <h1 class="title">CheeseAI client - Install models</h1>
+        <div class="ilistmenu">
+            <div class="warn">
+                <p>Some models might not work. These models were approved working:</p>
+                <ol>
+                    <li>runwayml/stable-diffusion-v1-5</li>
+                    <li>Linaqruf/animagine-xl</li>
+                </ol>
+            </div>
+            <div class="critical">
+                <p>Make sure you have enough free space on your primary partition before installation, otherwise your entire storage will be used up, your Computer will slow down and your System might get corrupted. You can check the model size under "Model"->"Files and versions".</p>
+            </div>
+            <div class="warn">
+                <p>If you do not see a list of files under "Model"->"Files and versions", the model is private, so the installation will not work.</p>
+            </div>
+            <div class="warn">
+                <p>Do not remove or change the search filters on Huggingface, all filtered out models are not compatible with the CheeseAI client.</p>
+            </div>
+            <p>Fot a list of models, go to <a href="https://huggingface.co/models?pipeline_tag=text-to-image&library=diffusers">Huggingface</a>.</p>
+            <form action="/diffusers/install_model" method="get">
+                <input class="perc100m56" type="text" id="model_name" name="model_name" required>
+                <input class="perc100m32" type="submit" value="Submit">
+            </form>
+        </div>
+    </body>
+</html>

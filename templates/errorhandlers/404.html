@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>CheeseAI client</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    <body>
+        <h1 class="title">404 - Something went wrong!</h1>
+        <div class="ilistmenu">
+            <p>It seems like the URL you entered might not be existent on the CheeseAI client. If you believe this to be a mistake, please report it to the CheeseAI developers.</p>
+            <div class="warn">
+                <p>Entering URLs on the CheeseAI client manually is not recommended, as you might corrupt your CheeseAI installation when entering the wrong URL.</p>
+            </div>
+            <p>Here are some links you might return to:</p>
+            <ol>
+                <li><a href="/">CheeseAI main page</a></li>
+                <li><a href="#" onclick="window.history.back()">The last page you've been to</a></li>
+            </ol>
+        </div>
+    </body>
+</html>
