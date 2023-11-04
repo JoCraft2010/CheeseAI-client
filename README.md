@@ -20,7 +20,15 @@ py --version
 ```
 and pressing enter.
 
-#### 2.1.2. Creating a venv
+#### 2.1.2. Setting PowerShell execution policy
+
+If you haven't already, set the PowerShell execution policy to be able to execute all PowerShell scripts inside this program by executing the following command inside PowerShell:
+```powershell
+Set-ExecutionPolicy Unrestricted
+```
+**Warning:** This might require executing PowerShell as an Admin.
+
+#### 2.1.3. Creating a venv
 
 If you already know how to create a venv, you can skip this section.
 
@@ -40,7 +48,7 @@ to create and enter a venv called ```venv```. **Warning:** When you are finished
 deactivate
 ```
 
-#### 2.1.3. Installing CheeseAI client
+#### 2.1.4. Installing CheeseAI client
 
 Copy All cheeseAI client files to your project folder. **Warning:** Copy them directly to your installation folder, so your file system will look like this:
 ```
@@ -70,7 +78,7 @@ Copy All cheeseAI client files to your project folder. **Warning:** Copy them di
 |- [...]
 ```
 
-#### 2.1.4. Setting up all dependencies
+#### 2.1.5. Setting up all dependencies
 
 Go back to PowerShell and make sure, that you are inside the venv, you created.
 You are inside a venv, when PowerShell looks something like ```(venv) PS C:\Path\to\your\folder>```.
@@ -94,7 +102,7 @@ This command will set up all dependencies for you.
 
 ### 3.1. Windows
 
-1. Open PowerShell, as described in 2.1.2.2.
+1. Open PowerShell, as described in 2.1.3.2.
 
 2. Enter your previously created venv using
 ```commandline
